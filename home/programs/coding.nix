@@ -151,6 +151,9 @@
     # Force UV to use our nix-ld-wrapped python always, instead of downloading
     # its own python binaries which won't work with precompiled libraries.`
     UV_PYTHON_DOWNLOADS="never";
+
+    # I can't think of a case where I don't want this. I always prefer neovim/clangd anyways
+    CMAKE_EXPORT_COMPILE_COMMANDS=1;
   };
 
 }

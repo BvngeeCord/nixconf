@@ -103,5 +103,10 @@
     .direnv/
     # do I want this? Do I want flake.nix/flake.lock too?
     shell.nix
+
+    # clangd cache
+    .cache/
+    # some people just don't bother lol
+    compile_commands.json
   '';
 }
