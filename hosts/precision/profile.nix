@@ -6,7 +6,7 @@
     isMobile = true;
     isNvidia = true;
     mainUser = "jack";
-    mainUserDesc = "Jack N";
+    mainUserDesc = "Jack Nystrom";
     mainUserEmail = "nystromjp@gmail.com";
   };
 }
