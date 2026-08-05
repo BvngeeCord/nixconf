@@ -4,6 +4,7 @@
 
     git = {
       enable = true;
+      lfs.enable = true;
       settings = {
         user.name = config.host.mainUserDesc;
         user.email = config.host.mainUserEmail;
