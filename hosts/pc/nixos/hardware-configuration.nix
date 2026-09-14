@@ -16,8 +16,9 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/FFC5-C695";
+    { device = "/dev/disk/by-uuid/C44E-FE9F";
       fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   fileSystems."/mnt/SecondaryDrive" =
@@ -33,7 +34,7 @@
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/8c8e62d4-999c-4b9d-90b1-f4f7ec7f9c41"; }
+    [ { device = "/dev/disk/by-uuid/0a14e01d-e85b-4071-b9aa-601f9edb805d"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -44,6 +45,6 @@
   # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = "performance";
+  # powerManagement.cpuFreqGovernor = "performance"; # see power.nix
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

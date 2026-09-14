@@ -28,7 +28,6 @@
       usePersistenced = false;
     };
   };
-  boot.blacklistedKernelModules = [ "nouveau" ];
   boot.kernelParams = [
     # "nvidia.NVreg_PreserveVideoMemoryAllocations=1" # Superseeded by UseKernelSuspendNotifiers
     "nvidia.NVreg_OpenRmEnableUnsupportedGpus=1"
@@ -37,5 +36,6 @@
     "nvidia.NVreg_TemporaryFilePath=/var/tmp"
   ];
 
+  # necessary for both X and Wayland based apps
   services.xserver.videoDrivers = [ "nvidia" ];
 }
