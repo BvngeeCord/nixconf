@@ -34,10 +34,3 @@ To see the difference / what changes between generations:
 
 `nix profile diff-closures --profile /nix/var/nix/profiles/system`
 
-# Todos:
-
-- fix and simplify QT (and GTK) theming
-- fix neovim app launcher desktop entry in thunar
-- Investigate declarative generation of qt[5,6]ct.conf files. Something like this:
-  https://discourse.nixos.org/t/struggling-to-configure-gtk-qt-theme-on-laptop/42268/10
-
